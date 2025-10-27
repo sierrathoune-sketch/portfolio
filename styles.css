@@ -244,3 +244,53 @@ footer h2 {
     width: 50%;
   }
 }
+/* ===========================
+   DARK MODE
+   =========================== */
+body.dark-mode {
+  background-color: #0b0c10;
+  color: #e5e7eb;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #003544, #005f73);
+}
+
+body.dark-mode nav {
+  background-color: #1f2937;
+  box-shadow: none;
+}
+
+body.dark-mode nav a {
+  color: #e5e7eb;
+}
+
+body.dark-mode .project-item,
+body.dark-mode .job-item {
+  background: #1e293b;
+  color: #e5e7eb;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode footer {
+  background: #00303d;
+}
+
+/* Dark mode toggle button */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+body.dark-mode #theme-toggle {
+  color: #e5e7eb;
+}
