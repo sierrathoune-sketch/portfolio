@@ -1,2 +1,0 @@
-# sierrathai
-Resume
