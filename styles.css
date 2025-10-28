@@ -1,4 +1,13 @@
 /* ===========================
+  AVATAR
+   =========================== */
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/* ===========================
    GLOBAL STYLES
    =========================== */
 :root {
@@ -294,3 +303,4 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
