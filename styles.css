@@ -3,9 +3,9 @@
    =========================== */
 .avatar {
   vertical-align: middle;
-  width: 575px;
-  height: 425px;
-  border-radius: 75%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
 }
 /* ===========================
    GLOBAL STYLES
@@ -303,6 +303,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
