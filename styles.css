@@ -33,6 +33,14 @@ body {
   line-height: 1.6;
 }
 
+.text {
+  align-self: flex-end;
+}
+
+.paragraph {
+  display: flex;
+}
+
 /* ===========================
    HEADER
    =========================== */
@@ -303,6 +311,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
