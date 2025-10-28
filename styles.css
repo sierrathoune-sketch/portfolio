@@ -1,12 +1,4 @@
-/* ===========================
-  AVATAR
-   =========================== */
-.avatar {
-  vertical-align: left;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-}
+
 /* ===========================
    GLOBAL STYLES
    =========================== */
@@ -389,6 +381,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
