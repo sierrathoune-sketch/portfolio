@@ -70,6 +70,9 @@ header p {
   font-size: 1.05rem;
 }
 
+span {
+  vertical-align:middle;
+}
 /* ===========================
    NAVIGATION
    =========================== */
@@ -313,6 +316,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
