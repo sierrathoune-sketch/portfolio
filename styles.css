@@ -4,7 +4,7 @@
 .avatar {
   vertical-align: middle;
   width: 575px;
-  height: 400px;
+  height: 425px;
   border-radius: 75%;
 }
 /* ===========================
@@ -303,6 +303,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
