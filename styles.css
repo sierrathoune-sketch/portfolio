@@ -65,7 +65,7 @@ body {
 }
 
 .profile-info h2 {
-  font-family: 'Gugi', cursive;
+  font-family: 'Roboto', cursive;
   color: #4caf50;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -351,6 +351,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
