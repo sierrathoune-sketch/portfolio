@@ -65,7 +65,7 @@ body {
 }
 
 .profile-info h2 {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto', sans-serif;
   color: #4caf50;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -301,6 +301,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
