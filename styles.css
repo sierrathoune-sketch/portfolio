@@ -58,7 +58,7 @@ body {
   color: #2b3a2e
 }
 
-.profile-info h1 {font-family: 'Lobster', cursive;
+.profile-info h1 {font-family: 'Lobster', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 0.3rem;
   color: #2e7d32;
@@ -351,6 +351,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
