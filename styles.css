@@ -102,7 +102,7 @@ body {
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column-reverse;
-    text-align: center;
+    text-align: left;
   }
   .profile-info, .profile-avatar {
     flex: 1 1 100%;
@@ -351,6 +351,7 @@ body.dark-mode footer {
 body.dark-mode #theme-toggle {
   color: #e5e7eb;
 }
+
 
 
 
