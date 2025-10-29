@@ -25,19 +25,14 @@
       </div>
     </header>
 <!--NAVIGATIONBAR-->
- <nav>
-    <ul>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-  </nav>
+<button class="tablink" onclick="openPage('Projects', this, 'red')">Projects</button>
+<button class="tablink" onclick="openPage('Education', this, 'green')" id="defaultOpen">Education</button>
+<button class="tablink" onclick="openPage('Experience', this, 'blue')">Experience</button>
+<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
 
   <!--PROJECTS/PORTFOLIO-->
    <main>
-      <section id="projects" class="projects">
+      <section id="Projects" class="tabcontent">
         <div class="content-wrap">
         <h2>Featured Projects</h2>
 
@@ -61,7 +56,7 @@
       </section>
         <!--End of Project block.-->
        <!--EDUCATION & CERTIFICATIONS-->
-       <section id="education" class="education">
+       <section id="Education" class="tab-content">
         <div class="content-wrap">
         <h2>Education</h2>
 
@@ -92,7 +87,7 @@
       </section>
 
       <!-- ***********************  WORK EXPERIENCE  *********************** -->
-      <section id="experience" class="work-experience">
+      <section id="Experience" class="tabcontent">
         <div class="content-wrap">
         <h2>Professional Experience</h2>
 
@@ -244,7 +239,7 @@
       </section>
 
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-      <footer id="contact">
+      <footer id="contact" class="tabcontent">
         <div class="content-wrap">
            <h2>Let's Connect</h2>
            <ul class="contact-list">
@@ -255,21 +250,6 @@
        </div>
       </footer>
     </main>
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme');
 
-  if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    toggleBtn.textContent = '☀️';
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    toggleBtn.textContent = isDark ? '☀️' : '🌙';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-</script>
 </body>
 </html>
