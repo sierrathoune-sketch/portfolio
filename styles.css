@@ -116,7 +116,7 @@ body {
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
+  background-color: #4caf50;
   color: white;
   float: left;
   border: none;
@@ -139,10 +139,10 @@ body {
   height: 100%;
 }
 
-#Projects {background-color: red;}
-#Education {background-color: green;}
-#Experience {background-color: blue;}
-#Contact {background-color: orange;}
+#Education {background-color: #F5F5DC;}
+#Experience {background-color: #008B8B;}
+#Projects {background-color: #CD5C5C;}
+#Contact {background-color: #DDA0DD;}
 /* ===========================
    SECTIONS
    =========================== */
@@ -306,6 +306,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
