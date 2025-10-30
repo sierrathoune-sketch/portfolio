@@ -1,4 +1,6 @@
-/* Set height of body and the document to 100% to enable "full page tabs" */
+/* ===========================
+   SET HEIGHT OF BODY AND THE DOCUMENT TO 100% TO ENABLE "FULL PAGE TABS"
+   =========================== */
 body, html {
   height: 100%;
   margin: 0;
@@ -103,7 +105,9 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive adjustments */
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+   =========================== */
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column-reverse;
@@ -131,7 +135,9 @@ body {
   background-color: #777;
 }
 
-/* Style the tab content (and add height:100% for full page content) */
+/* ===========================
+   STYLE THE TAB CONTENTS (AND ADD HEIGH:100% FOR FULL PAGE CONTENT)
+   =========================== */
 .tabcontent {
   color: white;
   display: none;
@@ -306,6 +312,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
