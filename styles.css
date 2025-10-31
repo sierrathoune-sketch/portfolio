@@ -164,24 +164,49 @@ main section {
 /* ===========================
    EDUCATION
    =========================== */
-.education p {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.education {
-  display: flex;
-  flex-direction: column;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+#Education {
+   padding: 3rem 1rem;
+   font-family: 'Poppins', sans-serif;
+   color: #333;
 }
 
-.education:hover {
-  transform: translateY(-4px);
+#Education h2 {
+   text-align:center;
+   font-size: 2.2rem;
+   color: #2e2e2e;
+   margin-bottom: 2rem;
 }
+
+.education-card {
+   display: flex
+   align-items: center;
+   background-color: #ffffff
+   border-radius: 16px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   padding: 1.5rem;
+   margin: 1.2rem auto;
+   max-width: 800px;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.school-logo {
+   width: 70px;
+   height: 70px;
+   object-fit: contain;
+   margin-right: 1.5rem;
+   border-radius: 8px;
+}
+
+.education-info p {
+   margin: 0.2rem 0;
+   color: #555;
+}
+
 
 
 /* ===========================
@@ -328,6 +353,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
