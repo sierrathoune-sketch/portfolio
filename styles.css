@@ -228,6 +228,62 @@ main section {
 }
 
 /* ===========================
+   EXPERIENCE
+   =========================== */
+#Experience {
+  background-color: #008B8B;
+  color: #2e2e2e;
+  padding: 4rem 1rem;
+}
+
+#Experience h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.experience-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.8rem 2rem;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card h3 {
+  font-size: 1.3rem;
+  color: #2e7d32;
+  margin-bottom: 0.4rem;
+}
+
+.experience-card .company {
+  font-weight: 600;
+  color: #4caf50;
+  margin-bottom: 0.6rem;
+}
+
+.experience-card ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.experience-card li {
+  margin-bottom: 0.4rem;
+}
+
+/* ===========================
    PROJECTS
    =========================== */
 .projects h2 {
@@ -285,42 +341,6 @@ main section {
   color: #00303d;
 }
 
-/* ===========================
-   EXPERIENCE
-   =========================== */
-.work-experience h2,
-.education h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.job-item {
-  background: var(--card-bg);
-  border-left: 5px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-}
-
-.job-item h3 {
-  color: var(--primary);
-  margin-bottom: 0.25rem;
-}
-
-.job-item p {
-  margin-bottom: 0.25rem;
-}
-
-.job-item ul {
-  margin-top: 0.75rem;
-  padding-left: 1.25rem;
-  color: var(--muted);
-}
-
-.job-item li {
-  margin-bottom: 0.5rem;
-}
 
 
 /* ===========================
@@ -371,6 +391,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
