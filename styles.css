@@ -165,13 +165,6 @@ main section {
    EDUCATION
    =========================== */
 #Education {
-   padding: 3rem 1rem;
-   font-family: 'Poppins', sans-serif;
-   color: #333;
-   background-color: #f5f5dc;
-}
-
-#Education {
    text-align: center;
    font-size: 2.2rem;
    color: #3b3b3b;
@@ -393,6 +386,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
