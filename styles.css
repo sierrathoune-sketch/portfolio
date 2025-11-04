@@ -180,7 +180,7 @@ main section {
 .education-card {
    display: flex;
    align-items: center;
-   background-color: #ffffff
+   background-color: #ffffff;
    border-radius: 16px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
    padding: 1.5rem;
@@ -353,6 +353,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
