@@ -136,13 +136,13 @@ body {
 }
 
 /* ===========================
-   STYLE THE TAB CONTENTS (AND ADD HEIGH:100% FOR FULL PAGE CONTENT)
+   STYLE THE TAB CONTENTS
    =========================== */
 .tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
+   color: white;
+   display: none;
+   padding: 100px 20px;
+   min-height: auto;
 }
 
 #Education {background-color: #F5F5DC;}
@@ -393,6 +393,7 @@ footer h2 {
     width: 50%;
   }
 }
+
 
 
 
