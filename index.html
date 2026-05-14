@@ -1,227 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Sierra Mullins | Testing Personnel</title>
-   <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Lobster&family=Roboto&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="styles.css">
-   <script src="script.js"></script>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sierra Mullins | Molecular Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --cream: #faf7f2;
+      --cream-dark: #f0ebe0;
+      --teal-deep: #1a4a4a;
+      --teal-mid: #2d6b6b;
+      --teal-light: #4a9090;
+      --gold: #b8860b;
+      --gold-light: #d4a843;
+      --warm-white: #fffef9;
+      --text-dark: #1c2624;
+      --text-mid: #3d4f4e;
+      --text-muted: #7a8e8d;
+      --card-shadow: 0 2px 20px rgba(26,74,74,0.08);
+      --card-shadow-hover: 0 8px 40px rgba(26,74,74,0.16);
+      --radius: 4px;
+      --radius-lg: 12px;
+    }
 
-<!--ABOUT/PROFILE-->
-  <body>   
-    <header class="profile-header">
-      <div class="profile-container">
-         <div class="profile-avatar">
-            <img src="profile-pic.png" alt="Profile Picture of Sierra Mullins" class="avatar">
-         </div>
-         <div class="profile-info">
-        <h1><span style="vertical-align: middle;">Sierra Mullins</h1>
-        <h2>Testing Personnel</h2></span>
-        <p>Molecular scientist with over three (3) years of experience in CAP/CLIA-accredited laboratory environments. Proven expertise in assay development, validations, and data analysis with a focus on HLA sequencing and genetics. Experienced in Python-based bioinformatics pipelines and quality systems under ISO 15189. </p>
-        </div>
-      </div>
-    </header>
-   
-<!--NAVIGATIONBAR-->
-<button class="tablink" onclick="openPage('Education', this, '#624441')" id="defaultOpen">Education</button>
-<button class="tablink" onclick="openPage('Experience', this, '#0972C8')">Experience</button>
-<button class="tablink" onclick="openPage('Projects', this, '#911742')">Projects</button>
-<button class="tablink" onclick="openPage('Contact', this, '#963089')">Contact</button>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<!--EDUCATION-->
-<section id="Education" class="tabcontent">
-   <div class="content-wrap">
-      <h2>Education</h2>
-           
-   <div class="education-card">
-      <img src="iu_logo.png" alt="Indiana University Logo" class="school-logo">
-      <div class="education-info">
-         <h3>Indiana University School of Medicine - Indianapolis</h3>
-         <p class="degree">Master of Science | 2022-2023</p>
-         <p>Anatomy, Cell Biology, and Physiology</p>
-      </div>
-   </div>
-      
-   <div class="education-card">
-      <img src="purdue_logo.png" alt="Purdue University Logo" class="school-logo">
-      <div class="education-info">
-         <h3>Purdue Unviersity - Fort Wayne</h3>
-         <p class="degree">Bachelor of Science | 2020-2022</p>
-         <p>Biology, Minor in Psychology, Honor's Certificate</p>
-      </div>
-   </div>
-           
-   <div class="education-card">
-      <img src="purdue_logo.png" alt="Purdue University Logo" class="school-logo">
-      <div class="education-info">
-         <h3>Purdue University - Fort Wayne</h3>
-         <p class="degree">Associates of Science | 2020-2022</p>
-         <p>Chemical Methods</p>
-      </div>
-   </div>
-           
-   <div class="education-card">
-      <img src="vincennes_logo.png" alt="Vincennes University Logo" class="school-logo">
-      <div class="education-info">
-         <h3>Vincennes University - Vincennes</h3>
-         <p class="degree">Associates of Science | 2016-2020</p>
-         <p>General Studies</p>
-         <p>Summa Cum Laude</p>
-      </div>
-   </div>
+    html { scroll-behavior: smooth; }
 
-   </div>
-</section>
- <!--EDUCATION END-->
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
 
-<!--EXPERIENCE-->
-<section id="Experience" class="tabcontent">
-   <div class="content-wrap">
-      <h2>Professional Experience</h2>
+    /* ===== HERO / HEADER ===== */
+    .hero {
+      background: var(--teal-deep);
+      position: relative;
+      overflow: hidden;
+      padding: 4rem 2rem 3.5rem;
+    }
 
-   <div class="experience-card">
-      <h3>Laboratory Associate II and Testing Personnel</h3>
-      <p class="company">Quantigen | Oct 2023 - Present</p>
-      <ul>
-         <li>Led high-complexity molecular testing involving DNA extraction, PCR, qPCR, and next-generation sequencing (NGS) for HLA genotyping and pharmacogenomic applications.</li>
-         <li>Performed bioinformatics analysis for NGS data, including alignment, primary/secondary analysis, and QC review using Python-based pipelines and specialized analysis software.</li>
-         <li>Supported assay validation and optimization for new molecular workflows, contributing to documentation, QC metrics, and compliance with CAP/CLIA and ISO 15189 standards.</li>
-         <li>Managed end-to-end sample workflow, including accessioning, tracking, and LIMS data management to ensure full traceability from receipt to result reporting.</li>
-         <li>Developed and maintained SOPs, validation reports, training documents, and instrument maintenance logs to sustain audit readiness and operational efficiency.</li>
-         <li>Collaborated cross-functionally with bioinformatics, QA, and laboratory management teams to improve efficiency and accuracy of results.</li>
-      </ul>
-   </div>
+    /* Subtle geometric background texture */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(184,134,11,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(74,144,144,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
 
-   <div class="experience-card">
-      <h3>Laboratory Associate I and Testing Personnel</h3>
-      <p class="company">Quantigen | Apr 2023 - Oct 2023</p>
-      <ul>
-         <li>Supported high-throughput molecular stool analysis under BSL-2 conditions, processing >200 samples/day using automated and manual techniques.</li>
-         <li>Operated Biomek liquid handling robots and qPCR instruments to ensure precision and reproducibility in large clinical studies.</li>
-         <li>Assisted with FDA clinical trial assays, maintaining data integrity and blinding in accordance with GCP guidelines.</li>
-         <li>Created Excel-based plate maps and used QC macros for improved data processing efficiency.</li>
-      </ul>
-   </div>
-      
-   <div class="experience-card">
-      <h3>Graduate Research Assistant</h3>
-      <p class="company">Indiana University School of Medicine | Aug 2022 - Apr 2023</p>
-      <ul>
-         <li>Conducted ELISA and ELLA protein quantification on human plasma studies to study disease biomarkers related to cardiomyopathy.</li>
-         <li>Managed and genotyped transgenic mouse colonies; performed dosing, echocardiography support, and tissue collection for metabolomic analysis.</li>
-         <li>Compiled experimental data using Excel and statistical analysis to evaluate drug effects on cardiac function and longevity in transgenic mice.</li>
-      </ul>
-   </div>
-      
-    <div class="experience-card">
-       <h3>Vice President of Legislation</h3>
-       <p class="company">Student Government Association of Purdue Fort Wayne University | Jan 2022 - May 2022</p>
-       <ul>
-          <li>Meetings under Robert's Rule of Order.</li>
-          <li>Facilitated student voices to faculty.</li>
-          <li>Charter and amended club constitutions. (12)</li>
-       </ul>
-        </div>
-      
-    <div class="experience-card">
-      <h3>Pro Tempore</h3>
-       <p class="company">Student Government Association of Purdue Fort Wayne University | May 2021 - Dec 2021</p>
-       <ul>
-          <li>Follow procedural rules.</li>
-          <li>Prepared structural layout to conduct tasks.</li>
-          <li>Took minute summarizing meeting concisely.</li>
-       </ul>
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 300;
+      color: var(--warm-white);
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--teal-light);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-bio {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 580px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .hero-bio strong {
+      color: rgba(255,255,255,0.92);
+      font-weight: 500;
+    }
+
+    .hero-avatar-wrap {
+      flex-shrink: 0;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold-light);
+      box-shadow: 0 0 0 8px rgba(184,134,11,0.12), 0 20px 60px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: block;
+    }
+
+    .avatar:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 0 12px rgba(184,134,11,0.16), 0 24px 64px rgba(0,0,0,0.35);
+    }
+
+    /* ===== NAVIGATION ===== */
+    .tab-nav {
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(26,74,74,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(26,74,74,0.06);
+    }
+
+    .tab-nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .tablink {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 1.1rem 2rem;
+      position: relative;
+      transition: color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .tablink::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%; right: 50%;
+      height: 2px;
+      background: var(--gold);
+      transition: left 0.3s ease, right 0.3s ease;
+    }
+
+    .tablink:hover { color: var(--teal-deep); }
+
+    .tablink.active {
+      color: var(--teal-deep);
+    }
+
+    .tablink.active::after {
+      left: 1.5rem;
+      right: 1.5rem;
+    }
+
+    /* ===== TAB CONTENT ===== */
+    .tabcontent {
+      display: none;
+      animation: fadeIn 0.4s ease both;
+      min-height: 70vh;
+      background: var(--cream);
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    .tabcontent.active {
+      display: block;
+    }
+
+    .content-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: var(--teal-deep);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 2.8rem;
+    }
+
+    /* ===== EDUCATION CARDS ===== */
+    .education-card {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(26,74,74,0.07);
+      padding: 1.6rem 2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 0.5s ease both;
+    }
+
+    .education-card:nth-child(2) { animation-delay: 0.05s; }
+    .education-card:nth-child(3) { animation-delay: 0.1s; }
+    .education-card:nth-child(4) { animation-delay: 0.15s; }
+    .education-card:nth-child(5) { animation-delay: 0.2s; }
+
+    .education-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .school-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 8px;
+      flex-shrink: 0;
+      background: var(--cream);
+      padding: 4px;
+    }
+
+    .education-info h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--teal-deep);
+      margin-bottom: 0.25rem;
+    }
+
+    .education-info .degree {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 0.2rem;
+      font-weight: 500;
+    }
+
+    .education-info p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== EXPERIENCE CARDS ===== */
+    #Experience {
+      background: var(--cream-dark);
+    }
+
+    .experience-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(26,74,74,0.07);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 0.5s ease both;
+    }
+
+    .experience-card:nth-child(2) { animation-delay: 0.05s; }
+    .experience-card:nth-child(3) { animation-delay: 0.1s; }
+    .experience-card:nth-child(4) { animation-delay: 0.15s; }
+    .experience-card:nth-child(5) { animation-delay: 0.2s; }
+    .experience-card:nth-child(6) { animation-delay: 0.25s; }
+    .experience-card:nth-child(7) { animation-delay: 0.3s; }
+    .experience-card:nth-child(8) { animation-delay: 0.35s; }
+    .experience-card:nth-child(9) { animation-delay: 0.4s; }
+
+    .experience-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .experience-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--teal-deep);
+    }
+
+    .experience-card .company {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 500;
+      margin-top: 0.15rem;
+    }
+
+    .experience-card ul {
+      padding-left: 1.1rem;
+      color: var(--text-mid);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .experience-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    .experience-card li::marker {
+      color: var(--teal-light);
+    }
+
+    /* ===== PROJECTS ===== */
+    #Projects {
+      background: var(--cream);
+    }
+
+    .project-item {
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(26,74,74,0.07);
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      animation: slideUp 0.5s ease both;
+    }
+
+    .project-item:nth-child(2) { animation-delay: 0.1s; }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-body {
+      padding: 2rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--teal-deep);
+      margin-bottom: 0.9rem;
+      line-height: 1.3;
+    }
+
+    .project-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--teal-deep);
+      color: var(--warm-white);
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: background 0.25s ease, transform 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .btn:hover {
+      background: var(--teal-mid);
+      transform: translateX(2px);
+    }
+
+    .btn::after {
+      content: '→';
+      font-size: 0.9rem;
+    }
+
+    /* ===== CONTACT ===== */
+    #Contact {
+      background: var(--teal-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #Contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(184,134,11,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(74,144,144,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    #Contact .content-wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    #Contact .section-heading {
+      color: var(--warm-white);
+      font-size: 3rem;
+    }
+
+    #Contact .section-rule {
+      margin: 0.4rem auto 1.5rem;
+    }
+
+    .contact-tagline {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .contact-grid {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.5rem;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 180px;
+      animation: slideUp 0.5s ease both;
+    }
+
+    .contact-card:nth-child(2) { animation-delay: 0.1s; }
+
+    .contact-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+    }
+
+    .contact-icon {
+      font-size: 1.8rem;
+    }
+
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .contact-value {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+      word-break: break-all;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111e1e;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .hero-avatar-wrap { order: -1; }
+      .avatar { width: 120px; height: 120px; }
+
+      .tab-nav-inner { overflow-x: auto; }
+      .tablink { padding: 1rem 1.2rem; font-size: 0.75rem; }
+
+      .project-item { grid-template-columns: 1fr; }
+      .project-item img { height: 220px; }
+
+      .education-card { flex-direction: column; text-align: center; }
+
+      .contact-grid { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">WEBSITE</p>
+      <h1 class="hero-name">Sierra Mullins</h1>
+      <p class="hero-title">MB(ASCP) | Molecular Diagnostics Scientist | NGS · ELISA · MSD · HLA | Python & Bioinformatics | MS, IUSM</p>
+      <p class="hero-bio">
+        Molecular diagnostics scientist with a Master's degree from Indiana University School of Medicine and multi-platform NGS expertise spanning Illumina, Element Biosciences, Ion Torrent, and Oxford Nanopore. Combines hands-on clinical laboratory experience in a CAP/CLIA/GCP-regulated environment with computational proficiency in Python, R, SQL, and bioinformatics pipeline development. Demonstrated sucess in assay validation, immunoassay development, quality systems management, and team leadership. Seeking a science-level position leveraging molecular diagnostics, genomic data analysis, and regulated laboratory expertise. 
+      </p>
     </div>
-      
-   <div class="experience-card">
-      <h3>Shift Manager</h3>
-      <p class="company">McDonald's | Oct 2015 - May 2024</p>
-      <ul>
-         <li>Managed crew members (up to 12).</li>
-         <li>Solved customer and worker complaints through complex problem solving.</li>
-         <li>Managed under a high-intensity work environment (100 cars a hour).</li>
-         </ul>
+    <div class="hero-avatar-wrap">
+      <img src="profile-pic.png" alt="Sierra Mullins" class="avatar">
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="tab-nav">
+  <div class="tab-nav-inner">
+    <button class="tablink" onclick="openTab('Education', this)" id="defaultOpen">Education</button>
+    <button class="tablink" onclick="openTab('Experience', this)">Experience</button>
+    <button class="tablink" onclick="openTab('Projects', this)">Projects</button>
+    <button class="tablink" onclick="openTab('Contact', this)">Contact</button>
+  </div>
+</nav>
+
+<!-- EDUCATION -->
+<section id="Education" class="tabcontent">
+  <div class="content-wrap">
+    <h2 class="section-heading">Education</h2>
+    <div class="section-rule"></div>
+
+    <div class="education-card">
+      <img src="iu_logo.png" alt="Indiana University" class="school-logo">
+      <div class="education-info">
+        <h3>Indiana University School of Medicine — Indianapolis</h3>
+        <p class="degree">Master of Science &nbsp;·&nbsp; 2022–2023</p>
+        <p>Anatomy, Cell Biology, and Physiology</p>
       </div>
-      
-   <div class="experience-card">
-      <h3>Substitute Teacher</h3>
-      <p class="company">East Allen County Schools | Aug 2020- Feb 2022</p>
-      <ul>
-         <li>Supervised students (up to 30).</li>
-         <li>Conducted class from written explanation.</li>
-         <li>Tutored students in diverse environments.</li>    
-      </ul>
-   </div>
-      
-    <div class="experience-card">
-       <h3>Care Team Assistant Ambassador</h3>
-       <p class="company">CareThrough | Jul 2020 - Feb 2021</p>
-       <ul>
-         <li>Monitored vitals and responded to medical emergencies (up to 24 patients).</li>
-         <li>Assisted with daily activities of living in COVID and Heart Failure Unit.</li>
-         <li>Trained new employees (6).</li>
-      </ul>
-   </div>
-      
-   <div class="experience-card">
-      <h3>Additional Experience</h3>
-      <ul>
-         <li><strong>Mentor</strong> – Starfish Initiative | May 2023 – Present</li>
-         <li><strong>Hospice Volunteer</strong> – Adoration Hospice | Jun 2020 – Jun 2023</li>
-        <li><strong>Public Relations Chair</strong> – SGA, Purdue Fort Wayne | Aug 2020 – May 2021</li>
-        <li><strong>Curriculum Committee Member</strong> – SGA, Purdue Fort Wayne | Aug 2020 – May 2021</li>
-        <li><strong>Hospital Intern</strong> – Parkview Cancer Institute | Aug 2019 – Dec 2019</li>
-        <li><strong>HOBY Alumni</strong> – World Leadership Conference | Jul 2018</li>
-      </ul>
-   </div>
-   </div>
+    </div>
+
+    <div class="education-card">
+      <img src="purdue_logo.png" alt="Purdue University" class="school-logo">
+      <div class="education-info">
+        <h3>Purdue University — Fort Wayne</h3>
+        <p class="degree">Bachelor of Science &nbsp;·&nbsp; 2020–2022</p>
+        <p>Biology · Minor in Psychology · Honor's Certificate</p>
+      </div>
+    </div>
+
+    <div class="education-card">
+      <img src="purdue_logo.png" alt="Purdue University" class="school-logo">
+      <div class="education-info">
+        <h3>Purdue University — Fort Wayne</h3>
+        <p class="degree">Associate of Science &nbsp;·&nbsp; 2020–2022</p>
+        <p>Chemical Methods</p>
+      </div>
+    </div>
+
+    <div class="education-card">
+      <img src="vincennes_logo.png" alt="Vincennes University" class="school-logo">
+      <div class="education-info">
+        <h3>Vincennes University — Vincennes</h3>
+        <p class="degree">Associate of Science &nbsp;·&nbsp; 2016–2020</p>
+        <p>General Studies &nbsp;·&nbsp; <em>Summa Cum Laude</em></p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- End of Job block. -->
-     
-<!--PROJECTS/PORTFOLIO-->
-   <main>
-      <section id="Projects" class="tabcontent">
-        <div class="content-wrap">
-        <h2>Projects</h2>
 
-        <article class="project-item">
-          <img src="antibiotic.png" alt="Poster Describing Antibiotic Discovery using Soil-Derived Bacteria">
-            <div>
-              <h3>Antibiotic Properties Identified from Soil-Derived Bacteria</h3>
-              <p>Antibiotic resistance is an advancing medical threat as increased usage results in decreased efficiency over time. Small World Initiative™ seeks to utilize an international program for crowdsourcing by creating a database of individual experiments to seek new antibiotics. The experiments require a sample of soil to be collected. Plates of soil collected from the soil are tested for antibiotic properties and resistance. PCR and DNA sequence analysis is conducted followed by biochemical tests for identification. The species is identified along with antibiotic properties for future reference as a possible synthetic compound using the secondary metabolites to produce antibiotics or other means of products.</p>
-              <a class="btn" href="#" target="_blank">View Poster</a>
-            </div>
-        </article>
-           
-        <article class="project-item">
-           <img src="lupus.jpg" alt="Poster Showing a Comparison of Treatments in Systemic Lupus Erythematosus">
-           <div>
-             <h3>Comparative Results for Complementary and Alternative Medicine (CAM) and Pharmaceutical Therapies for Managing Systemic Lupus Erythematosus</h3>
-             <p>Systemic lupus erythematosus (SLE) is a multi-system autoimmune disease with complex symptoms and underlying physiological mechanisms that vary between patients. It is one of the top 10 causes of death. The initial treatment uses immunosuppressive therapies combined with hydroxychloroquine, glucocorticoids, and immunomodulatory/immune-suppressive agents with cyclophosphamide and biologics used as necessary. Alternative treatments are acupuncture, massage, vitamin supplements, reflexology, aromatherapy, exercise, diet, and counseling.  A database search was used to synthesize articles to evaluate different treatments based on a baseline for efficacy. Pharmaceutical treatments showed more significant therapeutical benefits with adverse events while CAMs improve health-related quality of life. Using more recent classifications for SLE scores, implementing health-related quality of life, and increasing study population size are recommended for further studies.</p>
-             <a class="btn" href="#" target="_blank">View Poster</a>
-            </div>
-        </article>
-      </section>
-        <!--End of Project block.-->
-      
-    
-      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-      <section id="Contact" class="tabcontent">
-        <div class="content-wrap">
-           <h2>Let's Connect</h2>
-           <ul class="contact-list">
-        <ul class="contact-list">
-          <li><a href="mailto:sierrathoune@icloud.com">sierrathoune@icloud.com</a></li>
-          <li><a href="https://www.linkedin.com/in/sierra-mullins-137987215" target="_blank">LinkedIn</a></li>
-        </ul>
-       </div>
-      </section>
-    </main>
+<!-- EXPERIENCE -->
+<section id="Experience" class="tabcontent">
+  <div class="content-wrap">
+    <h2 class="section-heading">Experience</h2>
+    <div class="section-rule"></div>
 
-     <footer></footer>
-     
-     
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Clinical NGS Scientist</h3>
+          <p class="company">Quantigen &nbsp;·&nbsp; Oct 2023 – Present</p>
+        </div>
+      </div>
+      <ul>
+        <li>Lead NGS team executing end-to-end sequencing workflows in a CAP/CLIA-regulated molecular diagnostics laboratory specializing in HLA genotyping</li>
+        <li>Develop and execute Python-based bioinformatics pipeline for FASTQ-to-BAM alignment, automated QC metrics generation, and statistical pass/fail assignment</li>
+        <li>Perform and optimize immunoassay-based workflows for clniical trial samplle analysis and qualtiy control</li>
+        <li>Implemented MSD platform from procurement through validation, including instrumentation set-up, reagent ordering, SOP development, training protocol creation, and initial clinical trial sample testing</li>
+        <li>Design and execute HLA genotyping by NGS including hybridization capture library preparation, sequencing, and high-resolution 4-field allele assignment across Class I and Class II extended panels</li>
+        <li>Conduct assay and instrument validation and lot-to-lot verification studies documenting acceptance criteria, analytical sensitivity/specificity, PPA/NPA concordance, and reproducibiltiy per CAP requirements</li>
+        <li>Perform statistical analysis of NGS run quality data, Levey-Jennisngs QC trending, platform comparison, concordance studies, and Pareto analysis of instrument failure modes.</li>
+        <li>Design and maintain CAP audit-ready documentation including five-binder architecture with full traceability from sample receipt through final reporting</li>
+        <li>Train and supervise team members on complex molecular protocols, instrumnet operation, data analysis, and quality documentation standards</li>
+        <li>Lead Six Sigma Yellow Belt project (DMAIC) implementing standardized instrument downtime tracking and root cause analysis, establishing baseline metrics for continuous improvements</li>
+        <li>Use LabGuru to manage reagent inventory with lot-level traceability, certificate of analysis documentation, and expiration tracking across all all active assay platforms</li>    
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Molecular Biologist &amp; </h3>
+          <p class="company">Quantigen &nbsp;·&nbsp; Apr 2023 – Oct 2023</p>
+        </div>
+      </div>
+      <ul>
+        <li>Perform high-complexity molecular diagnostics including nucleic acid extraction, PCR, qPCR, Sanger sequencing, and NGS for clinical HLA genotyping and pharmacogenomic testing in a CAP/CLIA-accredited environment.</li>
+        <li>Execute end-to-end sample lifestyle management encompassing accessioning, LIMS data entry, result tracking, and chain-of-custody documentation.</li>
+        <li>Develop and maintain controlled laboratory documents including SOps, instrument maintenance logs, corrective action reports, and training records to sustain continuous audit readiness.</li>
+        <li>Collaborate cross-functionally with QA, bioinformatics, and laboratory operations teams to identify workflow inefficiencies, implement process improvements, and upload result accuracy and turnaround time standards.</li>
+        <li>Operated automated liquid handling systems for preparation of lyophilized qPCR plates in a high-throughput parasitology study, processing stool speciments at a high-throughput scale while maintaining precision, reproducibility, and data integrity</li>
+        <li>Analyzed qPCR data from high-throughput runs including amplification curve review, Cq interpretation, and result adjudication across large sample batches for global health research</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Biomedical Researcher</h3>
+          <p class="company">Indiana University School of Medicine &nbsp;·&nbsp; Aug 2022 – Apr 2023</p>
+        </div>
+      </div>
+      <ul>
+        <li>Managed transgenic mouse colonis including breeding strategy optimization, PCR-based genotyping, and colony adjustment based on experimental demand under IACUC-approved protocols</li>
+        <li>Performed in vivo dosing via IP, tissue collection, dissection, fixation, and processing for downstream molecular and histological analysis</li>
+        <li>Conducted computational analysis of experimental data using Excel for statistical modeling, data visualization, and result interpretation</li>
+        <li>Performed metabolomic sample preparation and cell-based assays supporting preclinical cardiovascular and metabolomic disease research</li>
+        <li>Maintained structured laboratory documentation in compliance with insttitutional quality and data integrity standards</li>
+        <li>Ran ELISA and ELLA assay for biomarker identification and analyzed data for clinical significance</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Vice President of Legislation</h3>
+          <p class="company">Student Government Association, Purdue Fort Wayne &nbsp;·&nbsp; Jan 2022 – May 2022</p>
+        </div>
+      </div>
+      <ul>
+        <li>Facilitated meetings under Robert's Rules of Order.</li>
+        <li>Amplified student voices to faculty leadership.</li>
+        <li>Chartered and amended 12 club constitutions.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Pro Tempore</h3>
+          <p class="company">Student Government Association, Purdue Fort Wayne &nbsp;·&nbsp; May 2021 – Dec 2021</p>
+        </div>
+      </div>
+      <ul>
+        <li>Followed procedural rules and prepared structural layout to conduct tasks.</li>
+        <li>Took concise meeting minutes for distribution.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Shift Manager</h3>
+          <p class="company">McDonald's &nbsp;·&nbsp; Oct 2015 – May 2024</p>
+        </div>
+      </div>
+      <ul>
+        <li>Managed crews of up to 12 in a high-throughput environment (100+ cars/hour).</li>
+        <li>Resolved complex customer and team conflicts under pressure.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Substitute Teacher</h3>
+          <p class="company">East Allen County Schools &nbsp;·&nbsp; Aug 2020 – Feb 2022</p>
+        </div>
+      </div>
+      <ul>
+        <li>Supervised up to 30 students and conducted classes from written lesson plans.</li>
+        <li>Tutored students across diverse academic environments.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Care Team Assistant Ambassador</h3>
+          <p class="company">CareThrough &nbsp;·&nbsp; Jul 2020 – Feb 2021</p>
+        </div>
+      </div>
+      <ul>
+        <li>Monitored vitals and responded to medical emergencies for up to 24 patients in COVID and Heart Failure units.</li>
+        <li>Assisted with daily activities of living and trained 6 new employees.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Additional Experience</h3>
+      <ul style="margin-top:0.8rem;">
+        <li><strong>Mentor</strong> – Starfish Initiative &nbsp;·&nbsp; May 2023 – Present</li>
+        <li><strong>Hospice Volunteer</strong> – Adoration Hospice &nbsp;·&nbsp; Jun 2020 – Jun 2023</li>
+        <li><strong>Public Relations Chair</strong> – SGA, Purdue Fort Wayne &nbsp;·&nbsp; Aug 2020 – May 2021</li>
+        <li><strong>Curriculum Committee Member</strong> – SGA, Purdue Fort Wayne &nbsp;·&nbsp; Aug 2020 – May 2021</li>
+        <li><strong>Hospital Intern</strong> – Parkview Cancer Institute &nbsp;·&nbsp; Aug 2019 – Dec 2019</li>
+        <li><strong>HOBY Alumni</strong> – World Leadership Conference &nbsp;·&nbsp; Jul 2018</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="Projects" class="tabcontent">
+  <div class="content-wrap">
+    <h2 class="section-heading">Projects</h2>
+    <div class="section-rule"></div>
+
+    <article class="project-item">
+      <img src="antibiotic.png" alt="Antibiotic Discovery Poster">
+      <div class="project-body">
+        <p class="project-tag">Microbiology · PCR · Sequencing</p>
+        <h3>Antibiotic Properties Identified from Soil-Derived Bacteria</h3>
+        <p>Antibiotic resistance is an advancing medical threat as increased usage results in decreased efficiency over time. Small World Initiative™ utilizes an international crowdsourcing program to seek new antibiotics. Soil samples are screened for antibiotic properties, followed by PCR and DNA sequence analysis for species identification and metabolite characterization.</p>
+        <a class="btn" href="#" target="_blank">View Poster</a>
+      </div>
+    </article>
+
+    <article class="project-item">
+      <img src="lupus.jpg" alt="SLE Treatment Comparison Poster">
+      <div class="project-body">
+        <p class="project-tag">Immunology · Literature Review</p>
+        <h3>CAM vs. Pharmaceutical Therapies in Systemic Lupus Erythematosus</h3>
+        <p>Systemic lupus erythematosus (SLE) is a multi-system autoimmune disease and one of the top 10 causes of death. A systematic database review synthesized evidence comparing immunosuppressive pharmaceutical regimens against complementary and alternative medicine (CAM) approaches, evaluated across efficacy and health-related quality of life metrics.</p>
+        <a class="btn" href="#" target="_blank">View Poster</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="Contact" class="tabcontent">
+  <div class="content-wrap">
+    <h2 class="section-heading">Let's Connect</h2>
+    <div class="section-rule" style="margin: 0.4rem auto 1rem;"></div>
+    <p class="contact-tagline">Open to opportunities in molecular diagnostics, genomics, and bioinformatics.</p>
+    <div class="contact-grid">
+      <a href="mailto:sierrathoune@icloud.com" class="contact-card">
+        <span class="contact-icon">✉</span>
+        <span class="contact-label">Email</span>
+        <span class="contact-value">sierrathoune@icloud.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sierra-mullins-137987215" target="_blank" class="contact-card">
+        <span class="contact-icon">in</span>
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">sierra-mullins-137987215</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Sierra Mullins &nbsp;·&nbsp; Built with intention
+</footer>
+
+<script>
+  function openTab(pageName, btn) {
+    document.querySelectorAll('.tabcontent').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tablink').forEach(el => el.classList.remove('active'));
+    document.getElementById(pageName).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  document.getElementById('defaultOpen').click();
+</script>
 </body>
 </html>
