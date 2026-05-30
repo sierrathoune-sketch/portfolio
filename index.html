@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sierra Mullins | Molecular Scientist</title>
+  <title>Sierra Mullins, MB(ASCP) | Molecular Diagnostics Scientist</title>
+  <meta name="description" content="Sierra Mullins, MB(ASCP) — molecular diagnostics scientist with multi-platform NGS expertise (Illumina, Element, Ion Torrent, Oxford Nanopore), CAP/CLIA/GCP experience, and applied bioinformatics in Python, R, and SQL.">
+  <meta name="author" content="Sierra Mullins">
+  <meta name="theme-color" content="#1a4a4a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Sierra Mullins, MB(ASCP) | Molecular Diagnostics Scientist">
+  <meta property="og:description" content="Multi-platform NGS, CAP/CLIA assay validation, and applied bioinformatics. MS, Indiana University School of Medicine.">
+  <meta property="og:image" content="profile-pic.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (inline SVG; teal helix-like glyph) -->
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231a4a4a'/><text x='50%25' y='54%25' font-family='Georgia,serif' font-size='34' fill='%23d4a843' text-anchor='middle' dominant-baseline='middle'>S</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
     /* ===== DESIGN TOKENS ===== */
     :root {
@@ -18,34 +36,55 @@
       --warm-white: #fffef9;
       --text-dark: #1c2624;
       --text-mid: #3d4f4e;
-      --text-muted: #7a8e8d;
+      --text-muted: #6b7e7d;
       --card-shadow: 0 2px 20px rgba(26,74,74,0.08);
       --card-shadow-hover: 0 8px 40px rgba(26,74,74,0.16);
       --radius: 4px;
       --radius-lg: 12px;
+      --focus-ring: 0 0 0 3px rgba(212,168,67,0.55);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
       background: var(--cream);
       color: var(--text-dark);
       line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* ===== HERO / HEADER ===== */
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 1rem;
+      background: var(--teal-deep);
+      color: var(--warm-white);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius);
+      z-index: 200;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .skip-link:focus { left: 1rem; outline: none; box-shadow: var(--focus-ring); }
+
+    :focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+      border-radius: var(--radius);
+    }
+
+    /* ===== HERO ===== */
     .hero {
       background: var(--teal-deep);
       position: relative;
       overflow: hidden;
       padding: 4rem 2rem 3.5rem;
     }
-
-    /* Subtle geometric background texture */
     .hero::before {
       content: '';
       position: absolute;
@@ -55,7 +94,6 @@
         radial-gradient(circle at 10% 80%, rgba(74,144,144,0.15) 0%, transparent 50%);
       pointer-events: none;
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -63,7 +101,6 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
     }
-
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -74,13 +111,8 @@
       position: relative;
       z-index: 1;
     }
-
-    .hero-text {
-      animation: fadeUp 0.8s ease both;
-    }
-
+    .hero-text { animation: fadeUp 0.8s ease both; }
     .hero-eyebrow {
-      font-family: 'DM Sans', sans-serif;
       font-size: 0.75rem;
       font-weight: 500;
       letter-spacing: 0.2em;
@@ -88,44 +120,34 @@
       color: var(--gold-light);
       margin-bottom: 0.75rem;
     }
-
     .hero-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(2.8rem, 5vw, 4.2rem);
       font-weight: 300;
       color: var(--warm-white);
       line-height: 1.1;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
     }
-
     .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
       font-weight: 400;
       font-style: italic;
       color: var(--teal-light);
       margin-bottom: 1.4rem;
+      line-height: 1.5;
     }
-
     .hero-bio {
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.72);
-      max-width: 580px;
+      color: rgba(255,255,255,0.78);
+      max-width: 620px;
       line-height: 1.75;
       font-weight: 300;
     }
+    .hero-bio strong { color: rgba(255,255,255,0.95); font-weight: 500; }
 
-    .hero-bio strong {
-      color: rgba(255,255,255,0.92);
-      font-weight: 500;
-    }
-
-    .hero-avatar-wrap {
-      flex-shrink: 0;
-      animation: fadeUp 0.8s 0.15s ease both;
-    }
-
+    .hero-avatar-wrap { flex-shrink: 0; animation: fadeUp 0.8s 0.15s ease both; }
     .avatar {
       width: 200px;
       height: 200px;
@@ -136,13 +158,12 @@
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       display: block;
     }
-
     .avatar:hover {
       transform: scale(1.04);
       box-shadow: 0 0 0 12px rgba(184,134,11,0.16), 0 24px 64px rgba(0,0,0,0.35);
     }
 
-    /* ===== NAVIGATION ===== */
+    /* ===== NAV / TABLIST ===== */
     .tab-nav {
       background: var(--warm-white);
       border-bottom: 1px solid rgba(26,74,74,0.1);
@@ -151,29 +172,30 @@
       z-index: 100;
       box-shadow: 0 2px 12px rgba(26,74,74,0.06);
     }
-
     .tab-nav-inner {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
     }
+    .tab-nav-inner::-webkit-scrollbar { display: none; }
 
     .tablink {
       background: none;
       border: none;
       cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
+      font-family: inherit;
       font-size: 0.82rem;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-muted);
-      padding: 1.1rem 2rem;
+      padding: 1.1rem 1.75rem;
       position: relative;
       transition: color 0.25s ease;
       white-space: nowrap;
     }
-
     .tablink::after {
       content: '';
       position: absolute;
@@ -182,17 +204,9 @@
       background: var(--gold);
       transition: left 0.3s ease, right 0.3s ease;
     }
-
     .tablink:hover { color: var(--teal-deep); }
-
-    .tablink.active {
-      color: var(--teal-deep);
-    }
-
-    .tablink.active::after {
-      left: 1.5rem;
-      right: 1.5rem;
-    }
+    .tablink[aria-selected="true"] { color: var(--teal-deep); }
+    .tablink[aria-selected="true"]::after { left: 1.25rem; right: 1.25rem; }
 
     /* ===== TAB CONTENT ===== */
     .tabcontent {
@@ -202,33 +216,33 @@
       background: var(--cream);
       padding: 4rem 1.5rem 5rem;
     }
+    .tabcontent.active { display: block; }
 
-    .tabcontent.active {
-      display: block;
-    }
-
-    .content-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-    }
+    .content-wrap { max-width: 860px; margin: 0 auto; }
 
     .section-heading {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2.6rem;
       font-weight: 300;
       color: var(--teal-deep);
       margin-bottom: 0.4rem;
       letter-spacing: -0.01em;
     }
-
     .section-rule {
       width: 48px;
       height: 2px;
       background: var(--gold);
       margin-bottom: 2.8rem;
     }
+    .subsection-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--teal-deep);
+      margin: 2.5rem 0 1rem;
+    }
 
-    /* ===== EDUCATION CARDS ===== */
+    /* ===== EDUCATION ===== */
     .education-card {
       display: flex;
       align-items: center;
@@ -242,16 +256,10 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: slideUp 0.5s ease both;
     }
-
-    .education-card:nth-child(2) { animation-delay: 0.05s; }
-    .education-card:nth-child(3) { animation-delay: 0.1s; }
-    .education-card:nth-child(4) { animation-delay: 0.15s; }
-    .education-card:nth-child(5) { animation-delay: 0.2s; }
-
-    .education-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--card-shadow-hover);
-    }
+    .education-card:nth-child(n+2) { animation-delay: 0.05s; }
+    .education-card:nth-child(n+3) { animation-delay: 0.1s; }
+    .education-card:nth-child(n+4) { animation-delay: 0.15s; }
+    .education-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
 
     .school-logo {
       width: 60px;
@@ -262,34 +270,52 @@
       background: var(--cream);
       padding: 4px;
     }
-
     .education-info h3 {
-      font-family: 'DM Sans', sans-serif;
       font-size: 1rem;
       font-weight: 600;
       color: var(--teal-deep);
       margin-bottom: 0.25rem;
     }
-
     .education-info .degree {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.05rem;
       font-style: italic;
       color: var(--gold);
       margin-bottom: 0.2rem;
       font-weight: 500;
     }
+    .education-info p { font-size: 0.88rem; color: var(--text-muted); }
 
-    .education-info p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+    /* ===== CERTIFICATIONS ===== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .cert-card {
+      background: var(--warm-white);
+      border: 1px solid rgba(26,74,74,0.07);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cert-card:hover { transform: translateY(-3px); box-shadow: var(--card-shadow-hover); }
+    .cert-card .cert-body { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .cert-card .cert-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--teal-deep);
+    }
+    .cert-card .cert-issuer {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 0.95rem;
     }
 
-    /* ===== EXPERIENCE CARDS ===== */
-    #Experience {
-      background: var(--cream-dark);
-    }
-
+    /* ===== EXPERIENCE ===== */
+    #Experience { background: var(--cream-dark); }
     .experience-card {
       background: var(--warm-white);
       border-radius: var(--radius-lg);
@@ -300,21 +326,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: slideUp 0.5s ease both;
     }
-
-    .experience-card:nth-child(2) { animation-delay: 0.05s; }
-    .experience-card:nth-child(3) { animation-delay: 0.1s; }
-    .experience-card:nth-child(4) { animation-delay: 0.15s; }
-    .experience-card:nth-child(5) { animation-delay: 0.2s; }
-    .experience-card:nth-child(6) { animation-delay: 0.25s; }
-    .experience-card:nth-child(7) { animation-delay: 0.3s; }
-    .experience-card:nth-child(8) { animation-delay: 0.35s; }
-    .experience-card:nth-child(9) { animation-delay: 0.4s; }
-
-    .experience-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--card-shadow-hover);
-    }
-
+    .experience-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
     .exp-header {
       display: flex;
       justify-content: space-between;
@@ -323,43 +335,68 @@
       gap: 0.5rem;
       margin-bottom: 0.9rem;
     }
-
     .experience-card h3 {
-      font-family: 'DM Sans', sans-serif;
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--teal-deep);
     }
-
     .experience-card .company {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1rem;
       font-style: italic;
       color: var(--gold);
       font-weight: 500;
       margin-top: 0.15rem;
     }
-
     .experience-card ul {
       padding-left: 1.1rem;
       color: var(--text-mid);
       font-size: 0.9rem;
       line-height: 1.75;
     }
+    .experience-card li { margin-bottom: 0.35rem; }
+    .experience-card li::marker { color: var(--teal-light); }
 
-    .experience-card li {
-      margin-bottom: 0.35rem;
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
     }
-
-    .experience-card li::marker {
-      color: var(--teal-light);
+    .skill-group {
+      background: var(--warm-white);
+      border: 1px solid rgba(26,74,74,0.07);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-group:hover { transform: translateY(-3px); box-shadow: var(--card-shadow-hover); }
+    .skill-group h3 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      list-style: none;
+    }
+    .skill-list li {
+      font-size: 0.82rem;
+      background: var(--cream);
+      color: var(--text-mid);
+      padding: 0.3rem 0.7rem;
+      border-radius: 50px;
+      border: 1px solid rgba(26,74,74,0.08);
     }
 
     /* ===== PROJECTS ===== */
-    #Projects {
-      background: var(--cream);
-    }
-
+    #Projects { background: var(--cream); }
     .project-item {
       background: var(--warm-white);
       border-radius: var(--radius-lg);
@@ -372,28 +409,14 @@
       grid-template-columns: 1fr 1fr;
       animation: slideUp 0.5s ease both;
     }
-
-    .project-item:nth-child(2) { animation-delay: 0.1s; }
-
-    .project-item:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--card-shadow-hover);
-    }
-
-    .project-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
+    .project-item:hover { transform: translateY(-5px); box-shadow: var(--card-shadow-hover); }
+    .project-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .project-body {
       padding: 2rem 2.2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-
     .project-tag {
       font-size: 0.7rem;
       font-weight: 600;
@@ -402,23 +425,20 @@
       color: var(--gold);
       margin-bottom: 0.6rem;
     }
-
     .project-body h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.4rem;
       font-weight: 500;
       color: var(--teal-deep);
       margin-bottom: 0.9rem;
       line-height: 1.3;
     }
-
     .project-body p {
       font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.75;
       margin-bottom: 1.4rem;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -434,16 +454,8 @@
       transition: background 0.25s ease, transform 0.2s ease;
       align-self: flex-start;
     }
-
-    .btn:hover {
-      background: var(--teal-mid);
-      transform: translateX(2px);
-    }
-
-    .btn::after {
-      content: '→';
-      font-size: 0.9rem;
-    }
+    .btn:hover { background: var(--teal-mid); transform: translateX(2px); }
+    .btn::after { content: '→'; font-size: 0.9rem; }
 
     /* ===== CONTACT ===== */
     #Contact {
@@ -451,7 +463,6 @@
       position: relative;
       overflow: hidden;
     }
-
     #Contact::before {
       content: '';
       position: absolute;
@@ -461,62 +472,46 @@
         radial-gradient(circle at 80% 20%, rgba(74,144,144,0.12) 0%, transparent 50%);
       pointer-events: none;
     }
-
-    #Contact .content-wrap {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-
-    #Contact .section-heading {
-      color: var(--warm-white);
-      font-size: 3rem;
-    }
-
-    #Contact .section-rule {
-      margin: 0.4rem auto 1.5rem;
-    }
-
+    #Contact .content-wrap { position: relative; z-index: 1; text-align: center; }
+    #Contact .section-heading { color: var(--warm-white); font-size: 3rem; }
+    #Contact .section-rule { margin: 0.4rem auto 1.5rem; }
     .contact-tagline {
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.7);
       font-size: 1rem;
       margin-bottom: 3rem;
       font-weight: 300;
     }
-
     .contact-grid {
       display: flex;
       gap: 1.5rem;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     .contact-card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-lg);
       padding: 2rem 2.5rem;
       text-decoration: none;
-      transition: background 0.3s ease, transform 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.75rem;
-      min-width: 180px;
+      min-width: 200px;
       animation: slideUp 0.5s ease both;
     }
-
     .contact-card:nth-child(2) { animation-delay: 0.1s; }
-
     .contact-card:hover {
       background: rgba(255,255,255,0.1);
       transform: translateY(-4px);
+      border-color: rgba(212,168,67,0.4);
     }
-
     .contact-icon {
-      font-size: 1.8rem;
+      width: 26px;
+      height: 26px;
+      color: var(--gold-light);
     }
-
     .contact-label {
       font-size: 0.72rem;
       font-weight: 600;
@@ -524,10 +519,9 @@
       text-transform: uppercase;
       color: var(--gold-light);
     }
-
     .contact-value {
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.9);
       word-break: break-all;
     }
 
@@ -537,122 +531,163 @@
       text-align: center;
       padding: 1.5rem;
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.35);
       letter-spacing: 0.05em;
     }
+    footer .heart { color: var(--gold-light); }
 
     /* ===== ANIMATIONS ===== */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to   { opacity: 1; }
     }
-
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .hero-inner { grid-template-columns: 1fr; text-align: left; gap: 1.8rem; }
       .hero-avatar-wrap { order: -1; }
       .avatar { width: 120px; height: 120px; }
 
-      .tab-nav-inner { overflow-x: auto; }
-      .tablink { padding: 1rem 1.2rem; font-size: 0.75rem; }
+      .tablink { padding: 1rem 1.1rem; font-size: 0.75rem; }
+      .tabcontent { padding: 2.5rem 1.25rem 3.5rem; }
 
       .project-item { grid-template-columns: 1fr; }
       .project-item img { height: 220px; }
 
       .education-card { flex-direction: column; text-align: center; }
-
       .contact-grid { flex-direction: column; align-items: center; }
+      #Contact .section-heading { font-size: 2.2rem; }
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      .tab-nav, footer, .skip-link { display: none !important; }
+      .tabcontent { display: block !important; page-break-inside: avoid; padding: 1.5rem 0; min-height: 0; background: #fff; }
+      .hero { background: #fff; color: #000; padding: 1rem 0; }
+      .hero-name, .section-heading, .experience-card h3, .education-info h3 { color: #000; }
+      .hero-title, .hero-bio, .experience-card .company, .education-info .degree { color: #333; }
+      .education-card, .experience-card, .skill-group, .cert-card, .project-item {
+        box-shadow: none; border: 1px solid #ccc; break-inside: avoid;
+      }
+      #Contact { background: #fff; }
+      #Contact .section-heading, .contact-tagline, .contact-label, .contact-value { color: #000 !important; }
+      .avatar { border-color: #888; box-shadow: none; }
     }
   </style>
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <!-- HERO -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="hero-eyebrow">WEBSITE</p>
+      <p class="hero-eyebrow">MOLECULAR DIAGNOSTICS &middot; GENOMICS</p>
       <h1 class="hero-name">Sierra Mullins</h1>
-      <p class="hero-title">MB(ASCP) | Molecular Diagnostics Scientist | NGS · ELISA · MSD · HLA | Python & Bioinformatics | MS, IUSM</p>
+      <p class="hero-title">MB(ASCP) &middot; NGS, ELISA, MSD, HLA &middot; Python &amp; Bioinformatics</p>
       <p class="hero-bio">
-        Molecular diagnostics scientist with a Master's degree from Indiana University School of Medicine and multi-platform NGS expertise spanning Illumina, Element Biosciences, Ion Torrent, and Oxford Nanopore. Combines hands-on clinical laboratory experience in a CAP/CLIA/GCP-regulated environment with computational proficiency in Python, R, SQL, and bioinformatics pipeline development. Demonstrated sucess in assay validation, immunoassay development, quality systems management, and team leadership. Seeking a science-level position leveraging molecular diagnostics, genomic data analysis, and regulated laboratory expertise. 
+        Molecular diagnostics scientist with a Master's degree from <strong>Indiana University School of Medicine</strong> and multi-platform NGS expertise spanning <strong>Illumina, Element Biosciences, Ion Torrent, and Oxford Nanopore</strong>. Combines hands-on clinical laboratory experience in CAP/CLIA/GCP-regulated environments with computational proficiency in <strong>Python, R, SQL, and bioinformatics pipeline development</strong>. Demonstrated success in assay validation, immunoassay development, quality systems management, and team leadership. Seeking a scientist-level position leveraging molecular diagnostics, genomic data analysis, and regulated laboratory expertise.
       </p>
     </div>
     <div class="hero-avatar-wrap">
-      <img src="profile-pic.png" alt="Sierra Mullins" class="avatar">
+      <img src="profile-pic.png" alt="Portrait of Sierra Mullins" class="avatar" width="200" height="200">
     </div>
   </div>
 </header>
 
 <!-- NAV -->
-<nav class="tab-nav">
-  <div class="tab-nav-inner">
-    <button class="tablink" onclick="openTab('Education', this)" id="defaultOpen">Education</button>
-    <button class="tablink" onclick="openTab('Experience', this)">Experience</button>
-    <button class="tablink" onclick="openTab('Projects', this)">Projects</button>
-    <button class="tablink" onclick="openTab('Contact', this)">Contact</button>
+<nav class="tab-nav" aria-label="Resume sections">
+  <div class="tab-nav-inner" role="tablist" aria-label="Resume sections">
+    <button class="tablink" role="tab" id="tab-Education" aria-controls="Education" aria-selected="true" tabindex="0">Education</button>
+    <button class="tablink" role="tab" id="tab-Experience" aria-controls="Experience" aria-selected="false" tabindex="-1">Experience</button>
+    <button class="tablink" role="tab" id="tab-Skills" aria-controls="Skills" aria-selected="false" tabindex="-1">Skills</button>
+    <button class="tablink" role="tab" id="tab-Projects" aria-controls="Projects" aria-selected="false" tabindex="-1">Projects</button>
+    <button class="tablink" role="tab" id="tab-Contact" aria-controls="Contact" aria-selected="false" tabindex="-1">Contact</button>
   </div>
 </nav>
 
-<!-- EDUCATION -->
-<section id="Education" class="tabcontent">
+<main id="main">
+
+<!-- EDUCATION + CERTIFICATIONS -->
+<section id="Education" class="tabcontent active" role="tabpanel" aria-labelledby="tab-Education" tabindex="0">
   <div class="content-wrap">
     <h2 class="section-heading">Education</h2>
     <div class="section-rule"></div>
 
     <div class="education-card">
-      <img src="iu_logo.png" alt="Indiana University" class="school-logo">
+      <img src="iu_logo.png" alt="" class="school-logo" width="60" height="60" loading="lazy">
       <div class="education-info">
-        <h3>Indiana University School of Medicine — Indianapolis</h3>
-        <p class="degree">Master of Science &nbsp;·&nbsp; 2022–2023</p>
+        <h3>Indiana University School of Medicine &mdash; Indianapolis</h3>
+        <p class="degree">Master of Science &nbsp;&middot;&nbsp; 2022&ndash;2023</p>
         <p>Anatomy, Cell Biology, and Physiology</p>
       </div>
     </div>
 
     <div class="education-card">
-      <img src="purdue_logo.png" alt="Purdue University" class="school-logo">
+      <img src="purdue_logo.png" alt="" class="school-logo" width="60" height="60" loading="lazy">
       <div class="education-info">
-        <h3>Purdue University — Fort Wayne</h3>
-        <p class="degree">Bachelor of Science &nbsp;·&nbsp; 2020–2022</p>
-        <p>Biology · Minor in Psychology · Honor's Certificate</p>
+        <h3>Purdue University &mdash; Fort Wayne</h3>
+        <p class="degree">Bachelor of Science &nbsp;&middot;&nbsp; 2020&ndash;2022</p>
+        <p>Biology &middot; Minor in Psychology &middot; Honors Certificate</p>
       </div>
     </div>
 
     <div class="education-card">
-      <img src="purdue_logo.png" alt="Purdue University" class="school-logo">
+      <img src="purdue_logo.png" alt="" class="school-logo" width="60" height="60" loading="lazy">
       <div class="education-info">
-        <h3>Purdue University — Fort Wayne</h3>
-        <p class="degree">Associate of Science &nbsp;·&nbsp; 2020–2022</p>
+        <h3>Purdue University &mdash; Fort Wayne</h3>
+        <p class="degree">Associate of Science &nbsp;&middot;&nbsp; 2020&ndash;2022</p>
         <p>Chemical Methods</p>
       </div>
     </div>
 
     <div class="education-card">
-      <img src="vincennes_logo.png" alt="Vincennes University" class="school-logo">
+      <img src="vincennes_logo.png" alt="" class="school-logo" width="60" height="60" loading="lazy">
       <div class="education-info">
-        <h3>Vincennes University — Vincennes</h3>
-        <p class="degree">Associate of Science &nbsp;·&nbsp; 2016–2020</p>
-        <p>General Studies &nbsp;·&nbsp; <em>Summa Cum Laude</em></p>
+        <h3>Vincennes University &mdash; Vincennes</h3>
+        <p class="degree">Associate of Science &nbsp;&middot;&nbsp; 2016&ndash;2020</p>
+        <p>General Studies &nbsp;&middot;&nbsp; <em>Summa Cum Laude</em></p>
+      </div>
+    </div>
+
+    <h2 class="subsection-heading">Certifications &amp; Continuing Education</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <p class="cert-title">MB(ASCP)<sup>CM</sup></p>
+        <p class="cert-issuer">American Society for Clinical Pathology</p>
+        <p class="cert-body">Technologist in Molecular Biology, board-certified.</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-title">Lean Six Sigma Yellow Belt</p>
+        <p class="cert-issuer">DMAIC methodology</p>
+        <p class="cert-body">Applied to instrument downtime tracking and root-cause analysis.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="Experience" class="tabcontent">
+<section id="Experience" class="tabcontent" role="tabpanel" aria-labelledby="tab-Experience" tabindex="0" hidden>
   <div class="content-wrap">
     <h2 class="section-heading">Experience</h2>
     <div class="section-rule"></div>
@@ -661,21 +696,21 @@
       <div class="exp-header">
         <div>
           <h3>Clinical NGS Scientist</h3>
-          <p class="company">Quantigen &nbsp;·&nbsp; Oct 2023 – Present</p>
+          <p class="company">Quantigen &nbsp;&middot;&nbsp; Oct 2023 &ndash; Present</p>
         </div>
       </div>
       <ul>
-        <li>Lead NGS team executing end-to-end sequencing workflows in a CAP/CLIA-regulated molecular diagnostics laboratory specializing in HLA genotyping</li>
-        <li>Develop and execute Python-based bioinformatics pipeline for FASTQ-to-BAM alignment, automated QC metrics generation, and statistical pass/fail assignment</li>
-        <li>Perform and optimize immunoassay-based workflows for clniical trial samplle analysis and qualtiy control</li>
-        <li>Implemented MSD platform from procurement through validation, including instrumentation set-up, reagent ordering, SOP development, training protocol creation, and initial clinical trial sample testing</li>
-        <li>Design and execute HLA genotyping by NGS including hybridization capture library preparation, sequencing, and high-resolution 4-field allele assignment across Class I and Class II extended panels</li>
-        <li>Conduct assay and instrument validation and lot-to-lot verification studies documenting acceptance criteria, analytical sensitivity/specificity, PPA/NPA concordance, and reproducibiltiy per CAP requirements</li>
-        <li>Perform statistical analysis of NGS run quality data, Levey-Jennisngs QC trending, platform comparison, concordance studies, and Pareto analysis of instrument failure modes.</li>
-        <li>Design and maintain CAP audit-ready documentation including five-binder architecture with full traceability from sample receipt through final reporting</li>
-        <li>Train and supervise team members on complex molecular protocols, instrumnet operation, data analysis, and quality documentation standards</li>
-        <li>Lead Six Sigma Yellow Belt project (DMAIC) implementing standardized instrument downtime tracking and root cause analysis, establishing baseline metrics for continuous improvements</li>
-        <li>Use LabGuru to manage reagent inventory with lot-level traceability, certificate of analysis documentation, and expiration tracking across all all active assay platforms</li>    
+        <li>Lead NGS team executing end-to-end sequencing workflows in a CAP/CLIA-regulated molecular diagnostics laboratory specializing in HLA genotyping.</li>
+        <li>Develop and execute Python-based bioinformatics pipeline for FASTQ-to-BAM alignment, automated QC metrics generation, and statistical pass/fail assignment.</li>
+        <li>Perform and optimize immunoassay-based workflows for clinical trial sample analysis and quality control.</li>
+        <li>Implemented MSD platform from procurement through validation, including instrumentation set-up, reagent ordering, SOP development, training protocol creation, and initial clinical trial sample testing.</li>
+        <li>Design and execute HLA genotyping by NGS, including hybridization-capture library preparation, sequencing, and high-resolution 4-field allele assignment across Class I and Class II extended panels.</li>
+        <li>Conduct assay and instrument validation and lot-to-lot verification studies documenting acceptance criteria, analytical sensitivity/specificity, PPA/NPA concordance, and reproducibility per CAP requirements.</li>
+        <li>Perform statistical analysis of NGS run quality data, Levey-Jennings QC trending, platform comparison, concordance studies, and Pareto analysis of instrument failure modes.</li>
+        <li>Design and maintain CAP audit-ready documentation including a five-binder architecture with full traceability from sample receipt through final reporting.</li>
+        <li>Train and supervise team members on complex molecular protocols, instrument operation, data analysis, and quality documentation standards.</li>
+        <li>Lead Six Sigma Yellow Belt project (DMAIC) implementing standardized instrument downtime tracking and root-cause analysis, establishing baseline metrics for continuous improvement.</li>
+        <li>Use LabGuru to manage reagent inventory with lot-level traceability, certificate-of-analysis documentation, and expiration tracking across all active assay platforms.</li>
       </ul>
     </div>
 
@@ -683,16 +718,16 @@
       <div class="exp-header">
         <div>
           <h3>Molecular Biologist</h3>
-          <p class="company">Quantigen &nbsp;·&nbsp; Apr 2023 – Oct 2023</p>
+          <p class="company">Quantigen &nbsp;&middot;&nbsp; Apr 2023 &ndash; Oct 2023</p>
         </div>
       </div>
       <ul>
-        <li>Perform high-complexity molecular diagnostics including nucleic acid extraction, PCR, qPCR, Sanger sequencing, and NGS for clinical HLA genotyping and pharmacogenomic testing in a CAP/CLIA-accredited environment.</li>
-        <li>Execute end-to-end sample lifestyle management encompassing accessioning, LIMS data entry, result tracking, and chain-of-custody documentation.</li>
-        <li>Develop and maintain controlled laboratory documents including SOps, instrument maintenance logs, corrective action reports, and training records to sustain continuous audit readiness.</li>
-        <li>Collaborate cross-functionally with QA, bioinformatics, and laboratory operations teams to identify workflow inefficiencies, implement process improvements, and upload result accuracy and turnaround time standards.</li>
-        <li>Operated automated liquid handling systems for preparation of lyophilized qPCR plates in a high-throughput parasitology study, processing stool speciments at a high-throughput scale while maintaining precision, reproducibility, and data integrity</li>
-        <li>Analyzed qPCR data from high-throughput runs including amplification curve review, Cq interpretation, and result adjudication across large sample batches for global health research</li>
+        <li>Performed high-complexity molecular diagnostics including nucleic-acid extraction, PCR, qPCR, Sanger sequencing, and NGS for clinical HLA genotyping and pharmacogenomic testing in a CAP/CLIA-accredited environment.</li>
+        <li>Executed end-to-end sample lifecycle management encompassing accessioning, LIMS data entry, result tracking, and chain-of-custody documentation.</li>
+        <li>Developed and maintained controlled laboratory documents including SOPs, instrument maintenance logs, corrective action reports, and training records to sustain continuous audit readiness.</li>
+        <li>Collaborated cross-functionally with QA, bioinformatics, and laboratory operations teams to identify workflow inefficiencies, implement process improvements, and uphold result accuracy and turnaround-time standards.</li>
+        <li>Operated automated liquid-handling systems for preparation of lyophilized qPCR plates in a high-throughput parasitology study, processing stool specimens at scale while maintaining precision, reproducibility, and data integrity.</li>
+        <li>Analyzed qPCR data from high-throughput runs including amplification-curve review, Cq interpretation, and result adjudication across large sample batches for global health research.</li>
       </ul>
     </div>
 
@@ -700,16 +735,16 @@
       <div class="exp-header">
         <div>
           <h3>Biomedical Researcher</h3>
-          <p class="company">Indiana University School of Medicine &nbsp;·&nbsp; Aug 2022 – Apr 2023</p>
+          <p class="company">Indiana University School of Medicine &nbsp;&middot;&nbsp; Aug 2022 &ndash; Apr 2023</p>
         </div>
       </div>
       <ul>
-        <li>Managed transgenic mouse colonis including breeding strategy optimization, PCR-based genotyping, and colony adjustment based on experimental demand under IACUC-approved protocols</li>
-        <li>Performed in vivo dosing via IP, tissue collection, dissection, fixation, and processing for downstream molecular and histological analysis</li>
-        <li>Conducted computational analysis of experimental data using Excel for statistical modeling, data visualization, and result interpretation</li>
-        <li>Performed metabolomic sample preparation and cell-based assays supporting preclinical cardiovascular and metabolomic disease research</li>
-        <li>Maintained structured laboratory documentation in compliance with insttitutional quality and data integrity standards</li>
-        <li>Ran ELISA and ELLA assay for biomarker identification and analyzed data for clinical significance</li>
+        <li>Managed transgenic mouse colonies including breeding strategy optimization, PCR-based genotyping, and colony adjustment based on experimental demand under IACUC-approved protocols.</li>
+        <li>Performed in vivo dosing via IP injection, tissue collection, dissection, fixation, and processing for downstream molecular and histological analysis.</li>
+        <li>Conducted computational analysis of experimental data in Excel for statistical modeling, data visualization, and result interpretation.</li>
+        <li>Performed metabolomic sample preparation and cell-based assays supporting preclinical cardiovascular and metabolic disease research.</li>
+        <li>Maintained structured laboratory documentation in compliance with institutional quality and data-integrity standards.</li>
+        <li>Ran ELISA and Ella assays for biomarker identification and analyzed data for clinical significance.</li>
       </ul>
     </div>
 
@@ -717,7 +752,7 @@
       <div class="exp-header">
         <div>
           <h3>Vice President of Legislation</h3>
-          <p class="company">Student Government Association, Purdue Fort Wayne &nbsp;·&nbsp; Jan 2022 – May 2022</p>
+          <p class="company">Student Government Association, Purdue Fort Wayne &nbsp;&middot;&nbsp; Jan 2022 &ndash; May 2022</p>
         </div>
       </div>
       <ul>
@@ -731,11 +766,11 @@
       <div class="exp-header">
         <div>
           <h3>Pro Tempore</h3>
-          <p class="company">Student Government Association, Purdue Fort Wayne &nbsp;·&nbsp; May 2021 – Dec 2021</p>
+          <p class="company">Student Government Association, Purdue Fort Wayne &nbsp;&middot;&nbsp; May 2021 &ndash; Dec 2021</p>
         </div>
       </div>
       <ul>
-        <li>Followed procedural rules and prepared structural layout to conduct tasks.</li>
+        <li>Followed procedural rules and prepared structural layouts to conduct meetings.</li>
         <li>Took concise meeting minutes for distribution.</li>
       </ul>
     </div>
@@ -744,7 +779,7 @@
       <div class="exp-header">
         <div>
           <h3>Shift Manager</h3>
-          <p class="company">McDonald's &nbsp;·&nbsp; Oct 2015 – May 2024</p>
+          <p class="company">McDonald's &nbsp;&middot;&nbsp; Oct 2015 &ndash; May 2024</p>
         </div>
       </div>
       <ul>
@@ -757,7 +792,7 @@
       <div class="exp-header">
         <div>
           <h3>Substitute Teacher</h3>
-          <p class="company">East Allen County Schools &nbsp;·&nbsp; Aug 2020 – Feb 2022</p>
+          <p class="company">East Allen County Schools &nbsp;&middot;&nbsp; Aug 2020 &ndash; Feb 2022</p>
         </div>
       </div>
       <ul>
@@ -770,7 +805,7 @@
       <div class="exp-header">
         <div>
           <h3>Care Team Assistant Ambassador</h3>
-          <p class="company">CareThrough &nbsp;·&nbsp; Jul 2020 – Feb 2021</p>
+          <p class="company">CareThrough &nbsp;&middot;&nbsp; Jul 2020 &ndash; Feb 2021</p>
         </div>
       </div>
       <ul>
@@ -782,79 +817,229 @@
     <div class="experience-card">
       <h3>Additional Experience</h3>
       <ul style="margin-top:0.8rem;">
-        <li><strong>Mentor</strong> – Starfish Initiative &nbsp;·&nbsp; May 2023 – Present</li>
-        <li><strong>Hospice Volunteer</strong> – Adoration Hospice &nbsp;·&nbsp; Jun 2020 – Jun 2023</li>
-        <li><strong>Public Relations Chair</strong> – SGA, Purdue Fort Wayne &nbsp;·&nbsp; Aug 2020 – May 2021</li>
-        <li><strong>Curriculum Committee Member</strong> – SGA, Purdue Fort Wayne &nbsp;·&nbsp; Aug 2020 – May 2021</li>
-        <li><strong>Hospital Intern</strong> – Parkview Cancer Institute &nbsp;·&nbsp; Aug 2019 – Dec 2019</li>
-        <li><strong>HOBY Alumni</strong> – World Leadership Conference &nbsp;·&nbsp; Jul 2018</li>
+        <li><strong>Mentor</strong> &mdash; Starfish Initiative &nbsp;&middot;&nbsp; May 2023 &ndash; Present</li>
+        <li><strong>Hospice Volunteer</strong> &mdash; Adoration Hospice &nbsp;&middot;&nbsp; Jun 2020 &ndash; Jun 2023</li>
+        <li><strong>Public Relations Chair</strong> &mdash; SGA, Purdue Fort Wayne &nbsp;&middot;&nbsp; Aug 2020 &ndash; May 2021</li>
+        <li><strong>Curriculum Committee Member</strong> &mdash; SGA, Purdue Fort Wayne &nbsp;&middot;&nbsp; Aug 2020 &ndash; May 2021</li>
+        <li><strong>Hospital Intern</strong> &mdash; Parkview Cancer Institute &nbsp;&middot;&nbsp; Aug 2019 &ndash; Dec 2019</li>
+        <li><strong>HOBY Alumni</strong> &mdash; World Leadership Conference &nbsp;&middot;&nbsp; Jul 2018</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- SKILLS -->
+<section id="Skills" class="tabcontent" role="tabpanel" aria-labelledby="tab-Skills" tabindex="0" hidden>
+  <div class="content-wrap">
+    <h2 class="section-heading">Technical Skills</h2>
+    <div class="section-rule"></div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Sequencing Platforms</h3>
+        <ul class="skill-list">
+          <li>Illumina</li>
+          <li>Element Biosciences</li>
+          <li>Ion Torrent</li>
+          <li>Oxford Nanopore</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Molecular Assays</h3>
+        <ul class="skill-list">
+          <li>NGS library prep</li>
+          <li>Hybridization capture</li>
+          <li>qPCR / PCR</li>
+          <li>Sanger sequencing</li>
+          <li>HLA genotyping (4-field)</li>
+          <li>Pharmacogenomics</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Immunoassays</h3>
+        <ul class="skill-list">
+          <li>ELISA</li>
+          <li>Ella</li>
+          <li>MSD (Meso Scale Discovery)</li>
+          <li>Biomarker analysis</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Bioinformatics &amp; Programming</h3>
+        <ul class="skill-list">
+          <li>Python</li>
+          <li>R</li>
+          <li>SQL</li>
+          <li>FASTQ &rarr; BAM pipelines</li>
+          <li>QC metric automation</li>
+          <li>Statistical analysis</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Quality &amp; Compliance</h3>
+        <ul class="skill-list">
+          <li>CAP / CLIA</li>
+          <li>GCP</li>
+          <li>Assay validation</li>
+          <li>Lot-to-lot verification</li>
+          <li>Levey-Jennings QC</li>
+          <li>SOP authoring</li>
+          <li>Audit readiness</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Process Improvement</h3>
+        <ul class="skill-list">
+          <li>Lean Six Sigma (Yellow Belt)</li>
+          <li>DMAIC</li>
+          <li>Root-cause analysis</li>
+          <li>Pareto analysis</li>
+          <li>Workflow optimization</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Laboratory Systems</h3>
+        <ul class="skill-list">
+          <li>LIMS</li>
+          <li>LabGuru</li>
+          <li>Automated liquid handlers</li>
+          <li>Chain-of-custody documentation</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Leadership</h3>
+        <ul class="skill-list">
+          <li>Team supervision</li>
+          <li>Training program design</li>
+          <li>Cross-functional collaboration</li>
+          <li>Mentorship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS -->
-<section id="Projects" class="tabcontent">
+<section id="Projects" class="tabcontent" role="tabpanel" aria-labelledby="tab-Projects" tabindex="0" hidden>
   <div class="content-wrap">
     <h2 class="section-heading">Projects</h2>
     <div class="section-rule"></div>
 
     <article class="project-item">
-      <img src="antibiotic.png" alt="Antibiotic Discovery Poster">
+      <img src="antibiotic.png" alt="Research poster: Antibiotic Properties Identified from Soil-Derived Bacteria" loading="lazy">
       <div class="project-body">
-        <p class="project-tag">Microbiology · PCR · Sequencing</p>
+        <p class="project-tag">Microbiology &middot; PCR &middot; Sequencing</p>
         <h3>Antibiotic Properties Identified from Soil-Derived Bacteria</h3>
-        <p>Antibiotic resistance is an advancing medical threat as increased usage results in decreased efficiency over time. Small World Initiative™ utilizes an international crowdsourcing program to seek new antibiotics. Soil samples are screened for antibiotic properties, followed by PCR and DNA sequence analysis for species identification and metabolite characterization.</p>
-        <a class="btn" href="#" target="_blank">View Poster</a>
+        <p>Antibiotic resistance is an advancing medical threat as increased use erodes efficacy over time. The Small World Initiative&trade; leverages an international crowdsourcing program to surface new antibiotic candidates. Soil samples were screened for antibiotic activity, followed by PCR and DNA sequence analysis for species identification and metabolite characterization.</p>
+        <a class="btn" href="antibiotic.png" target="_blank" rel="noopener">View Full Poster</a>
       </div>
     </article>
 
     <article class="project-item">
-      <img src="lupus.jpg" alt="SLE Treatment Comparison Poster">
+      <img src="lupus.jpg" alt="Research poster: CAM vs. Pharmaceutical Therapies in Systemic Lupus Erythematosus" loading="lazy">
       <div class="project-body">
-        <p class="project-tag">Immunology · Literature Review</p>
+        <p class="project-tag">Immunology &middot; Literature Review</p>
         <h3>CAM vs. Pharmaceutical Therapies in Systemic Lupus Erythematosus</h3>
-        <p>Systemic lupus erythematosus (SLE) is a multi-system autoimmune disease and one of the top 10 causes of death. A systematic database review synthesized evidence comparing immunosuppressive pharmaceutical regimens against complementary and alternative medicine (CAM) approaches, evaluated across efficacy and health-related quality of life metrics.</p>
-        <a class="btn" href="#" target="_blank">View Poster</a>
+        <p>Systemic lupus erythematosus (SLE) is a multi-system autoimmune disease and one of the leading causes of death among autoimmune conditions. A systematic database review synthesized evidence comparing immunosuppressive pharmaceutical regimens against complementary and alternative medicine (CAM) approaches, evaluated across efficacy and health-related quality-of-life metrics.</p>
+        <a class="btn" href="lupus.jpg" target="_blank" rel="noopener">View Full Poster</a>
       </div>
     </article>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="Contact" class="tabcontent">
+<section id="Contact" class="tabcontent" role="tabpanel" aria-labelledby="tab-Contact" tabindex="0" hidden>
   <div class="content-wrap">
     <h2 class="section-heading">Let's Connect</h2>
     <div class="section-rule" style="margin: 0.4rem auto 1rem;"></div>
     <p class="contact-tagline">Open to opportunities in molecular diagnostics, genomics, and bioinformatics.</p>
     <div class="contact-grid">
-      <a href="mailto:sierrathoune@icloud.com" class="contact-card">
-        <span class="contact-icon">✉</span>
+      <a href="mailto:sierrathoune@icloud.com" class="contact-card" aria-label="Send Sierra an email">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 6-10 7L2 6"/>
+        </svg>
         <span class="contact-label">Email</span>
         <span class="contact-value">sierrathoune@icloud.com</span>
       </a>
-      <a href="https://www.linkedin.com/in/sierra-mullins" target="_blank" class="contact-card">
-        <span class="contact-icon">in</span>
+      <a href="https://www.linkedin.com/in/sierra-mullins" target="_blank" rel="noopener" class="contact-card" aria-label="View Sierra's LinkedIn profile (opens in new tab)">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+        </svg>
         <span class="contact-label">LinkedIn</span>
         <span class="contact-value">sierra-mullins</span>
+      </a>
+      <a href="https://github.com/sierrathoune-sketch" target="_blank" rel="noopener" class="contact-card" aria-label="View Sierra's GitHub profile (opens in new tab)">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.37-3.87-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.78.11 3.07.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">sierrathoune-sketch</span>
       </a>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer>
-  &copy; 2026 Sierra Mullins &nbsp;·&nbsp; Built with intention <3
+  &copy; <span id="footer-year">2026</span> Sierra Mullins &nbsp;&middot;&nbsp; Built with intention <span class="heart" aria-hidden="true">&#9829;</span>
 </footer>
 
 <script>
-  function openTab(pageName, btn) {
-    document.querySelectorAll('.tabcontent').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tablink').forEach(el => el.classList.remove('active'));
-    document.getElementById(pageName).classList.add('active');
-    btn.classList.add('active');
-  }
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
 
-  document.getElementById('defaultOpen').click();
+    function activate(tab, setFocus) {
+      tabs.forEach(function (t, i) {
+        var selected = t === tab;
+        t.setAttribute('aria-selected', selected ? 'true' : 'false');
+        t.setAttribute('tabindex', selected ? '0' : '-1');
+        if (selected && setFocus) t.focus();
+        if (panels[i]) {
+          if (selected) {
+            panels[i].classList.add('active');
+            panels[i].removeAttribute('hidden');
+          } else {
+            panels[i].classList.remove('active');
+            panels[i].setAttribute('hidden', '');
+          }
+        }
+      });
+      // Update URL hash without scrolling
+      var id = tab.getAttribute('aria-controls');
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+    }
+
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener('click', function () { activate(tab, false); });
+      tab.addEventListener('keydown', function (e) {
+        var next;
+        if (e.key === 'ArrowRight') next = tabs[(idx + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') next = tabs[(idx - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') next = tabs[0];
+        else if (e.key === 'End') next = tabs[tabs.length - 1];
+        if (next) { e.preventDefault(); activate(next, true); }
+      });
+    });
+
+    // Deep-link via hash
+    var hash = (location.hash || '').replace('#', '');
+    var initial = tabs.find ? tabs.find(function (t) { return t.getAttribute('aria-controls') === hash; }) : null;
+    activate(initial || tabs[0], false);
+
+    // Footer year (auto)
+    var yr = document.getElementById('footer-year');
+    if (yr) yr.textContent = new Date().getFullYear();
+  })();
 </script>
 </body>
 </html>
