@@ -686,6 +686,9 @@
         <p class="cert-issuer">American Society for Clinical Pathology</p>
         <p class="cert-body">Technologist in Molecular Biology, board-certified.</p>
       </div>
+    </div>
+  </div>
+</section>
 
 <!-- EXPERIENCE -->
 <section id="Experience" class="tabcontent" role="tabpanel" aria-labelledby="tab-Experience" tabindex="0" hidden>
@@ -1007,53 +1010,6 @@
   &copy; <span id="footer-year">2026</span> Sierra Mullins &nbsp;&middot;&nbsp; Built with intention <span class="heart" aria-hidden="true">&#9829;</span>
 </footer>
 
-<script>
-  (function () {
-    var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
-    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
-
-    function activate(tab, setFocus) {
-      tabs.forEach(function (t, i) {
-        var selected = t === tab;
-        t.setAttribute('aria-selected', selected ? 'true' : 'false');
-        t.setAttribute('tabindex', selected ? '0' : '-1');
-        if (selected && setFocus) t.focus();
-        if (panels[i]) {
-          if (selected) {
-            panels[i].classList.add('active');
-            panels[i].removeAttribute('hidden');
-          } else {
-            panels[i].classList.remove('active');
-            panels[i].setAttribute('hidden', '');
-          }
-        }
-      });
-      // Update URL hash without scrolling
-      var id = tab.getAttribute('aria-controls');
-      if (history.replaceState) history.replaceState(null, '', '#' + id);
-    }
-
-    tabs.forEach(function (tab, idx) {
-      tab.addEventListener('click', function () { activate(tab, false); });
-      tab.addEventListener('keydown', function (e) {
-        var next;
-        if (e.key === 'ArrowRight') next = tabs[(idx + 1) % tabs.length];
-        else if (e.key === 'ArrowLeft') next = tabs[(idx - 1 + tabs.length) % tabs.length];
-        else if (e.key === 'Home') next = tabs[0];
-        else if (e.key === 'End') next = tabs[tabs.length - 1];
-        if (next) { e.preventDefault(); activate(next, true); }
-      });
-    });
-
-    // Deep-link via hash
-    var hash = (location.hash || '').replace('#', '');
-    var initial = tabs.find ? tabs.find(function (t) { return t.getAttribute('aria-controls') === hash; }) : null;
-    activate(initial || tabs[0], false);
-
-    // Footer year (auto)
-    var yr = document.getElementById('footer-year');
-    if (yr) yr.textContent = new Date().getFullYear();
-  })();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
