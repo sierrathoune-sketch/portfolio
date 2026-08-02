@@ -12,3 +12,4 @@ I started coding when I was 8 on Roblox using LuaScript and thought it was so fu
 > [!NOTE]
 > Last updated on 02August2026.
 
+<a href="https://www.buymeacoffee.com/sierramullins" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" ></a>
