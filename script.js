@@ -1,23 +1,67 @@
-function openPage(pageName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+document.addEventListener('DOMContentLoaded', function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  if (!tabs.length) {
+    console.warn('No tabs were found for the resume tab widget.');
+    return;
   }
 
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
+  var panels = tabs.map(function (tab) {
+    return document.getElementById(tab.getAttribute('aria-controls'));
+  });
+
+  function activate(tab, setFocus) {
+    tabs.forEach(function (t, idx) {
+      var selected = t === tab;
+      t.setAttribute('aria-selected', selected ? 'true' : 'false');
+      t.setAttribute('tabindex', selected ? '0' : '-1');
+      if (selected && setFocus) t.focus();
+      if (panels[idx]) {
+        if (selected) {
+          panels[idx].classList.add('active');
+          panels[idx].removeAttribute('hidden');
+        } else {
+          panels[idx].classList.remove('active');
+          panels[idx].setAttribute('hidden', '');
+        }
+      }
+    });
+
+    var id = tab.getAttribute('aria-controls');
+    if (history.replaceState) {
+      history.replaceState(null, '', '#' + id);
+    }
   }
 
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
+  function findInitialTab() {
+    var hash = (location.hash || '').replace(/^#/, '');
+    if (!hash) return null;
+    return tabs.find(function (tab) {
+      return tab.getAttribute('aria-controls') === hash;
+    }) || null;
+  }
 
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
+  tabs.forEach(function (tab, idx) {
+    tab.addEventListener('click', function () {
+      activate(tab, false);
+    });
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+    tab.addEventListener('keydown', function (e) {
+      var next;
+      if (e.key === 'ArrowRight') next = tabs[(idx + 1) % tabs.length];
+      else if (e.key === 'ArrowLeft') next = tabs[(idx - 1 + tabs.length) % tabs.length];
+      else if (e.key === 'Home') next = tabs[0];
+      else if (e.key === 'End') next = tabs[tabs.length - 1];
+      if (next) {
+        e.preventDefault();
+        activate(next, true);
+      }
+    });
+  });
+
+  activate(findInitialTab() || tabs[0], false);
+
+  var footerYear = document.getElementById('footer-year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+});
